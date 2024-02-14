@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){let e=0;const t=document.querySelectorAll(".imagens_celebridades img");t[e].style.display="block"});
