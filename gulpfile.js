@@ -4,21 +4,21 @@ const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 
 function compileSass() {
-  return src('D:/EBAC/gulpjs/styles/**/*.scss')
+  return src('src/styles/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(dest('D:/EBAC/gulpjs/styles'));
+    .pipe(dest('./dist/styles'));
 }
 
 function compressImages() {
-  return src('D:/EBAC/gulpjs/img/**/*')
+  return src('src/img/**/*')
     .pipe(imagemin())
-    .pipe(dest('D:/EBAC/gulpjs/img'));
+    .pipe(dest('./dist/img'));
 }
 
 function compressJS() {
-  return src('D:/EBAC/gulpjs/js/**/*.js')
+  return src('src/js/**/*.js')
     .pipe(uglify())
-    .pipe(dest('D:/EBAC/gulpjs/js'));
+    .pipe(dest('./dist/js'));
 }
 
 exports.default = series(compileSass, compressImages, compressJS);
