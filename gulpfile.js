@@ -4,9 +4,9 @@ const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 
 function compileSass() {
-  return src('src/styles/**/*.scss')
+  return src('src/assets/**/*.scss') 
     .pipe(sass().on('error', sass.logError))
-    .pipe(dest('./dist/styles'));
+    .pipe(dest('./dist/assets'));
 }
 
 function compressImages() {
@@ -16,7 +16,7 @@ function compressImages() {
 }
 
 function compressJS() {
-  return src('src/js/**/*.js')
+  return src('src/js/**/*.js') // Alterado de 'src/js/**/*.js' para 'src/js/**/*.js'
     .pipe(uglify())
     .pipe(dest('./dist/js'));
 }

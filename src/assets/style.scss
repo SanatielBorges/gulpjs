@@ -7,10 +7,6 @@
     $max-container-width: 1024px;
     $container-padding: 16px;
     
-    // Importando módulos necessários
-    @use "sass:map";
-    @use "sass:media";
-    
     // Estilos
     * {
         margin: 0;
